@@ -1,4 +1,4 @@
-# Install script for directory: /home/wyb/MyRep/socket
+# Install script for directory: /home/wyb/Websocket
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/wyb/MyRep/socket/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/wyb/Websocket/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

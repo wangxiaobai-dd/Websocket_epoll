@@ -1,5 +1,5 @@
 CMakeFiles/TCPServer.dir/TCPServer.cpp.o: \
- /home/wyb/MyRep/socket/TCPServer.cpp /usr/include/stdc-predef.h \
+ /home/wyb/Websocket/TCPServer.cpp /usr/include/stdc-predef.h \
  /usr/local/gcc-11.4.0/include/c++/11.4.0/string \
  /usr/local/gcc-11.4.0/include/c++/11.4.0/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/local/gcc-11.4.0/include/c++/11.4.0/x86_64-pc-linux-gnu/bits/os_defines.h \
@@ -201,10 +201,10 @@ CMakeFiles/TCPServer.dir/TCPServer.cpp.o: \
  /usr/local/gcc-11.4.0/include/c++/11.4.0/bits/stl_tree.h \
  /usr/local/gcc-11.4.0/include/c++/11.4.0/bits/stl_map.h \
  /usr/local/gcc-11.4.0/include/c++/11.4.0/bits/stl_multimap.h \
- /home/wyb/MyRep/socket/WSRequest.h \
+ /home/wyb/Websocket/WSRequest.h \
  /usr/local/gcc-11.4.0/include/c++/11.4.0/algorithm \
  /usr/local/gcc-11.4.0/include/c++/11.4.0/bits/ranges_algo.h \
  /usr/local/gcc-11.4.0/include/c++/11.4.0/bits/ranges_util.h \
  /usr/local/gcc-11.4.0/include/c++/11.4.0/pstl/glue_algorithm_defs.h \
  /usr/local/gcc-11.4.0/include/c++/11.4.0/cstring \
- /home/wyb/MyRep/socket/sha1.h /home/wyb/MyRep/socket/base64.h
+ /home/wyb/Websocket/sha1.h /home/wyb/Websocket/base64.h

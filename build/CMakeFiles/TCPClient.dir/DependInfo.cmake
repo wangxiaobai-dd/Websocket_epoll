@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/wyb/MyRep/socket/TCPClient.cpp" "CMakeFiles/TCPClient.dir/TCPClient.cpp.o" "gcc" "CMakeFiles/TCPClient.dir/TCPClient.cpp.o.d"
+  "/home/wyb/Websocket/TCPClient.cpp" "CMakeFiles/TCPClient.dir/TCPClient.cpp.o" "gcc" "CMakeFiles/TCPClient.dir/TCPClient.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

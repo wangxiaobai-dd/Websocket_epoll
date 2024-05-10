@@ -1,5 +1,5 @@
 CMakeFiles/TCPClient.dir/TCPClient.cpp.o: \
- /home/wyb/MyRep/socket/TCPClient.cpp /usr/include/stdc-predef.h \
+ /home/wyb/Websocket/TCPClient.cpp /usr/include/stdc-predef.h \
  /usr/local/gcc-11.4.0/include/c++/11.4.0/string \
  /usr/local/gcc-11.4.0/include/c++/11.4.0/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/local/gcc-11.4.0/include/c++/11.4.0/x86_64-pc-linux-gnu/bits/os_defines.h \

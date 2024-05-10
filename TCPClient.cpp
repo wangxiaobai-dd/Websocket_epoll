@@ -61,8 +61,14 @@ class TCPClient
 		{
 			struct epoll_event ev;
 			struct epoll_event ev2;
+
+			std::string request = "GET /ws HTTP/1.1\r\nConnection: Upgrade\r\nUpgrade: websocket\r\nSec-WebSocket-Version: 13\r\nSec-WebSocket-Key: QWz1vB/77j8J8JcT/qtiLQ==\r\n\r\n";
+
+			::write(sockfd, request.data(), request.size());
+
 			while(true)
 			{
+				/*
 				if(::epoll_wait(epfd_1, &ev, 1, 0) > 0)
 				{
 					if(ev.events & EPOLLIN)
@@ -73,6 +79,7 @@ class TCPClient
 						::write(sockfd, buf, strlen(buf));
 					}
 				}
+				*/
 				if(::epoll_wait(epfd_2, &ev2, 1, 0) > 0)
 				{
 					if(ev2.events & EPOLLIN)
@@ -87,6 +94,8 @@ class TCPClient
 							close(sockfd);
 							exit(1);
 						}
+						else if(ret > 0)
+							std::cout << "recv msg:" << buf <<std::endl;
 					}
 				}
 			}
