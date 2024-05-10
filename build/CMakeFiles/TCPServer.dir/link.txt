@@ -1,0 +1,1 @@
+/usr/bin/g++  -std=gnu++2a -Wall -Wextra -g -O0 -rdynamic CMakeFiles/TCPServer.dir/TCPServer.cpp.o CMakeFiles/TCPServer.dir/base64.cpp.o CMakeFiles/TCPServer.dir/sha1.cpp.o -o TCPServer
