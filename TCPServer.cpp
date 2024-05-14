@@ -50,7 +50,10 @@ struct ConnData
 void ConnData::parseBuffer()
 {
 	if(!ws.parseBuffer(inBuffer, outBuffer))
+	{
+		std::cout << "ParseBuffer error close" << std::endl;
 		close = true;
+	}
 }
 
 #define MAXEVENTS 100
@@ -152,11 +155,13 @@ void TCPServer::serverEpollClose(int fd)
 
 int TCPServer::serverEpollWait()
 {
-	int rc = epoll_wait(epfd, &*events.begin(), events.size(), -1);
+	int rc = epoll_wait(epfd, &*events.begin(), events.size(), 2000);
 	if(rc < 0)
 	{
 		std::cerr << "EPOLL_WAIT ERROR, " << errno << std::endl; 
 	}
+	else if(rc == 0)
+		std::cout << "EPOLL TIMEOUT" << std::endl;
 	return rc;
 }
 
@@ -226,7 +231,7 @@ void TCPServer::handleEvents(int num)
 {
 	for(int i = 0; i < num; ++i)
 	{
-		if(events[i].data.fd == listenfd)
+		if(events[i].data.fd == listenfd && events[i].events & EPOLLIN)
 		{
 			struct sockaddr_in client_addr;
 			memset(&client_addr, 0, sizeof(struct sockaddr_in));
