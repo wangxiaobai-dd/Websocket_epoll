@@ -156,11 +156,15 @@ void WSSocket::sendMsg(std::string& outBuffer)
 
 	if(masked)
 	{
-		*(uint8_t*)(header + headerLen) = 1;
-		*(uint8_t*)(header + headerLen + 1) = 2;
-		*(uint8_t*)(header + headerLen + 2) = 3;
-		*(uint8_t*)(header + headerLen + 3) = 4;
+		uint8_t maskKey[4] = {0};
+		*(uint8_t*)(header + headerLen) = maskKey[0] = 1;
+		*(uint8_t*)(header + headerLen + 1) = maskKey[1] = 2;
+		*(uint8_t*)(header + headerLen + 2) = maskKey[2] = 3;
+		*(uint8_t*)(header + headerLen + 3) = maskKey[3] = 4;
 		headerLen += 4;
+
+		for(int i = 0; i < respond.size(); ++i)
+			respond[i] = respond[i] ^ maskKey[i % 4];
 	}
 
 	outBuffer += std::string(reinterpret_cast<char*>(header), headerLen);
